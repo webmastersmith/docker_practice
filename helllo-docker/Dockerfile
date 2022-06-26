@@ -1,4 +1,5 @@
-FROM node:alpine
-COPY . /app
-WORKDIR /app
-CMD node app.js
+FROM ubuntu:jammy
+RUN apt update
+RUN apt install git python3-pip
+RUN python3 -m pip install ansible
+
